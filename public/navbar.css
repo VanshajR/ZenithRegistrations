@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+@font-face {
+    font-family:Equinox ;
+    src: url("./EquinoxRegular.otf");
+}
+
+.bg {
+    background: url("./images/WhatsApp\ Image\ 2024-01-25\ at\ 08.59.51_9546e2b9.jpg");
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+/* html::-webkit-scrollbar {
+    width: 0.3rem;
+    height: 0.3rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #8F47BC ;
+    border-radius: 0.5rem;
+} */
+.nav-bar {
+    height: 60px;
+    background: transparent;
+    width: 100%;
+    position: static;
+    font-family: Equinox;
+}
+.logo {
+    float: left; 
+    position: relative;
+    top: 5px;
+    left: 10px;
+    width:50px;
+    height: auto;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+    font-family: Equinox;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: transparent;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+}
+
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 15px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span::before,
+#nav-toggle span::after {
+    position: absolute;
+    display: block;
+    content: '';
+    /*span before,span,span after ke liye h*/
+    background: #fff;
+    height: 4.5px;
+    width: 30px;
+    /*hamb menu wd and ht*/
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span::before {
+    top: -10px;
+}
+
+#nav-toggle span::after {
+    bottom: -10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+#nav-toggle.active ~ .nav-list{
+    background-color: black;
+}
+#nav-toggle.active span::before,
+#nav-toggle.active span::after {
+    top: 0;
+}
+
+#nav-toggle.active span::before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span::after {
+    transform: rotate(-45deg);
+}
+@media only screen and (max-width: 768px) {
+
+    .nav-mobile {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        padding: 70px 0 15px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        line-height: 20px;
+    }
+
+
+    nav ul li ul li a {
+        padding-left: 30%;
+    }
+
+}
+
+@media screen and (min-width: 799px) {
+    .nav-list {
+        display: block !important;
+    }
+} 
+
+

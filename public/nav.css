@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(18, 21, 22);
+     /* background: url("https://picsum.photos/id/237/200/300"); */
+}
+@font-face {
+    font-family:Equinox ;
+    src: url("./EquinoxRegular.otf");
+  }
+.header{
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    /* backdrop-filter: blur(10px); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    padding: 1.3rem 10%;
+}
+.header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background: rgb(142, 60, 5); */
+    color: white;
+    /* backdrop-filter: blur(50px); */
+    z-index: -1;
+}
+.logo{
+    font-size: 1.35rem;
+    color: white;
+    text-decoration: none;
+}
+.navbar a{
+    font-size: 20px;
+    color: rgb(252, 238, 238);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1vw;
+    /* cursor: pointer; */
+    cursor: url("./assets/cursor-pointer.png"),default;
+    font-family: Equinox;
+}
+#check{
+    display: none;
+}
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+    .navbar a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px){
+    .icons{
+        display: inline-flex;
+    }
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+.navbar{
+    /* position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;  */
+    /* backdrop-filter: blur(50px); */
+    overflow: hidden;
+    transition: .3s ease;
+}
+#check:checked~.navbar {
+    height: 100rem;
+    width: 100%;
+}
+.navbar a{
+    /* display: block; */
+    font-size: 13px;
+    margin: 1.5rem 0;
+    text-align: center;
+    padding: 10px;
+    transform: translateY(-25px);
+}
+#check:checked~.navbar {
+    transform: translateY(0);
+}
+}
+@media (max-width: 550px){
+    .navbar a{
+        font-size: 10px;
+    }
+}
+@media (max-width: 490px){
+    .logo{
+        display: none;
+    }
+    .navbar{
+        margin: auto;
+    }
+    .navbar a{
+        font-size: 8.5px;
+    }
+}
+@media (max-width: 360px){
+    .logo{
+        scale: 0.5;
+        display: none;
+    }
+    .navbar a{
+        font-size: 6px;
+        margin-left: 0px;
+    }
+}
+/* .navbar div{
+    scale: 1.5;
+} */

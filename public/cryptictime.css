@@ -1,0 +1,109 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Equinox;
+}
+
+body{
+    color: #8F47BC;
+    height: 100vh;
+    backdrop-filter: blur(2px) saturate(120%);
+    -webkit-backdrop-filter: blur(2px) saturate(120%);
+    background-color: black;
+    overflow: hidden;
+    background: url("./assets/cryptic-time.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: url("./assets/cursor-point-small.png"),default;
+}
+.full-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* z-index: 100; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+
+}
+h1{
+    font-size: 6vw;
+    position: relative;
+    bottom: 150px;
+}
+h2{
+    font-size: 4vw;
+    position: relative;
+    bottom: 75px;
+}
+.time{
+    width: 80vw;
+    position: relative;
+    top: 50px;
+}
+.time ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.time ul li{
+    list-style: none;
+    font-size: 3vw;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 500px) {
+    .page{
+        position: relative;
+        bottom: 60px;
+    }
+    h1{
+        font-size: 45px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    li{
+        font-size: 18px;
+    }
+}
+@media (max-width: 400px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    li{
+        font-size: 16px;
+    }
+}
+@media (max-width: 300px){
+    .page{
+        position: relative;
+        bottom: 40px;
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    li{
+        font-size: 11px;
+    }
+}
